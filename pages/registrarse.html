@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Registración</title>
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navPrincipal">
+            <a href="../index.html">
+                <img src="../assets/img/iconHome.png" width="40px" alt="Movieflix - Catalogo de Peliculas" loading="lazy" class="logo">
+                <span>Movieflix | Catálogo de Películas</span>
+            </a>
+            <ul class="listNav">
+                <li><a href="../index.html#tendencias" class="linkNav">Tendencias</a></li>
+                <li><a href="#" class="linkNav">Registrarse</a></li>
+                <li><a href="./iniciarsesion.html" class="linkNav btnInicioSesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainRegistracion">
+        <div class="divRegistracion">
+            <h1>Registro</h1>
+            <form action="" method="post" class="formRegistracion">
+                <input class="inputForm" type="text" name="txtNombre" id="txtNombre" placeholder="Nombre" required>
+                <input class="inputForm" type="text" name="txtApellido" id="txtApellido" placeholder="Apellido" required>
+                <input class="inputForm" type="text" name="txtEmail" id="txtEmail" placeholder="Email" required>
+                <input class="inputForm" type="password" name="txtContraseña" id="txtContraseña" placeholder="Contraseña" required>
+                <input class="inputForm" type="date" name="txtFecha" id="txtFecha" placeholder="dd/mm/aaaa" required>
+                <select class="inputForm" name="txtPais" id="txtPais">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+                <div class="divTerminos">
+                    <input type="checkbox" name="chkTerminos" id="chkTerminos" value="1" required>
+                    <label for="chkTerminos">Acepto términos y condiciones</label>
+                </div>
+                <input class="btnRegistracion" type="submit" value="Registrarse">
+                <a href="" class="linkHelp">¿Necesitas ayuda?</a>
+            </form>
+        </div>
+    </main>
+    <footer class="footerIniciosesion">
+        <nav>
+            <ul>
+                <li><a href="">Términos y condiciones</a></li>
+                <li><a href="">Preguntas frecuentes</a></li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="" class="linkAdminPelis">Administrador Películas</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
