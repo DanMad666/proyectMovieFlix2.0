@@ -24,25 +24,25 @@ header, footer{
     background-color: var(--fourth-color);
     color: var(--main-color);
 }
-/*estilos de las tag H1*/
+/*estilos de las tag h1*/
 h1{
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
-/*estilos de las tag H2*/
+/*estilos de las tag h2*/
 h2{
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
-/*estilos de las lineas HR*/
+/*estilos de las lineas hr*/
 hr{
     width: 80%;
     margin: 0 auto;
     border: 1px solid #0b5991;
 }
-
+/*keyframes para animacion del logo de la pagina*/
 @keyframes rotarLogo{
     0%{rotate: 0deg;}
     25%{rotate: 90deg;}
@@ -50,6 +50,25 @@ hr{
     75%{rotate: 270deg;}
     100%{rotate: 360deg;}
 }
+
+/*barra para navegadores Edge, Chrome y Safari*/
+*::-webkit-scrollbar{
+    width: 15px;
+}
+*::-webkit-scrollbar-track{
+    background: var(--secondary-color);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #013f6b;
+}
+/*barra para navegadores Firefox*/
+*{
+    scrollbar-width: 15px;
+    scrollbar-color: #013f6b;
+}
+
+/*--------*****------Estilos del sitio para Escritorio------****--------------
+----------------------------------------------------------------------------*/
 
 /*estilos del header de la pagina index.html*/
 .header{
@@ -104,6 +123,7 @@ hr{
         }
     }
 }
+
 /*estilos del main de la pagina index*/
 .sectionTitulos{
     height: 90vh;
@@ -267,6 +287,7 @@ hr{
         }
     }
 }
+
 /*estilos del footer de la pagina index.html*/
 .footer{
     height: 10vh;
@@ -315,7 +336,7 @@ hr{
 }
  
 
-/*---------------------estilos de la pagina iniciarsesion.html---------------------------------*/
+/*------------estilos de la pagina iniciarsesion.html----------------*/
 /*header la página, mismo que la de la pagina index*/
 /*estilos del main de la pagina iniciosesion.html*/
 .mainIniciosesion{
@@ -329,7 +350,6 @@ hr{
     justify-content: center;
     align-items: center;
     .divIniciosesion{
-        /*border: 1px solid white;*/
         height: 80%;
         width: 30%;
         display: flex;
@@ -340,12 +360,10 @@ hr{
         h1{
             color: var(--main-color);
             font-size: 3rem;
-            /*border: 1px solid white;*/
         }
         .formIniciosesion{
             display: flex;
             flex-direction: column;
-            /*border: 1px solid greenyellow;*/
             width: 80%;
             margin: 0 auto;
             height: 40%;
@@ -370,7 +388,11 @@ hr{
                 background-color: var(--third-color);
                 border: 2px solid var(--main-color);
                 border-radius: 5px;
-                color: var(--main-color);   
+                color: var(--main-color);
+                transition: transform 0.5s ease;   
+            }
+            .btnEnvioForm:hover{
+                transform: scale(0.97);
             }
             .linkReg{
                 font-size: 1rem;
@@ -382,26 +404,6 @@ hr{
             }
         }
     } 
-}
-.footerIniciosesion{
-    height: 10vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ul{
-        height: 100%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        gap: 20px;
-        a{
-            text-decoration: none;
-            color: var(--main-color);
-            font-size: 1.2rem;
-        }
-    }
 }
 
 /*--------------estilos de la pagina registrarse.html--------*/
@@ -459,6 +461,10 @@ hr{
                 border: 2px solid var(--main-color);
                 border-radius: 5px;
                 color: var(--main-color);
+                transition: transform 0.5s ease;
+            }
+            .btnRegistracion:hover{
+                transform: scale(0.97);
             }
             .linkHelp{
                 font-size: 1rem;
@@ -476,7 +482,11 @@ hr{
 /*---header, mismo estilo que index.html ---*/
 /*---Estilos del main de detalle.html----*/
 .sectionSup{
-    height: 45vh;
+    height: 70vh;
+    background-image: radial-gradient(circle, #00000080,#00000080), url(../assets/img/bgGodzillaKong.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -485,13 +495,13 @@ hr{
         width: 30%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         img{
-            width: 230px;
-            height: 330px;
+            width: 350px;
+            height: 550px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0px 0px 10px -1px rgba(247,247,247,0.75);
             -webkit-box-shadow: 0px 0px 10px -1px rgba(247,247,247,0.75);
             -moz-box-shadow: 0px 0px 10px -1px rgba(247,247,247,0.75);
@@ -511,6 +521,11 @@ hr{
         }
         h4{
             font-weight: 300;
+        }
+        .infoDetalle{
+            span{
+                font-size: 1rem;
+            }
         }
         .repartoDetalle{
             width: 80%;
@@ -580,22 +595,206 @@ hr{
 }
 
 
+/*--------*****------Estilos del sitio para móvil------****--------------
+----------------------------------------------------------------------------*/
+@media screen and (max-width: 576px){
+    /*-------Estilos para la pagina index.html--------*/
+    .header{
+        height: 13vh;
+        .navPrincipal{
+            flex-direction: column;
+             a{
+                margin-top: 10px;
+                margin-left: 0;
+                img{
+                    width: 20px;
+                }
+                span{
+                    font-size: 1.2rem;
+                }
+            }
+            .listNav{
+                margin-bottom: 10px;
+                margin-right: 0;
+                column-gap: 20px;
+                .linkNav, .btnInicioSesion{
+                    font-size: 0.9rem;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    .sectionTitulos{
+        .contenedorTitulos{
+            h1{
+                font-size: 2.7rem;
+            }
+            h2{
+                font-size: 1.4rem;
+            }
+            .btnRegistrarse{
+                font-size: 1.1rem;
+                padding: 5px 15px;
+            }
+        }
+    }
+    .busqueda{
+        div{
+            h2{
+                font-size: 1.5rem;
+            }
+            .formBusqueda{
+                .txtBusqueda{
+                    width: 330px;
+                    height: 40px;
+                    font-size: 1.1rem;
+                    margin-bottom: 10px;
+                    margin-right: 0;
+                }
+                .btnBuscar{
+                    font-size: 1.1rem;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+    .peliculasTendencias{
+        h2{
+            font-size: 1.6rem;
+        }
+    }
+    .peliculasClasicos{
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    .footer{
+        height: 20vh;
+        .listaFooter{
+            flex-direction: column;
+            row-gap: 15px;
+            .linkFooter{
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    /*----estilos para la pagina iniciarsesion.html------*/
+    .mainIniciosesion{
+        .divIniciosesion{
+            width: 80%;
+            h1{
+                font-size: 2rem;
+            }
+            .formIniciosesion{
+                .txtEmail, .txtPassword{
+                    height: 25px;
+                    font-size: 0.9rem;
+                    padding: 10px;
+                }
+                .btnEnvioForm{
+                    font-size: 1.1rem;
+                    height: 30px;
+                }
+                .linkReg{
+                    font-size: 0.7rem;
+                    font-weight: 250;
+                }
+            }
+        }
+    }
+
+    /*----estilos para la pagina registrarse.html------*/
+    .mainRegistracion{
+        .divRegistracion{
+            width: 80%;
+            h1{
+                font-size: 2rem;
+            }
+            .formRegistracion{
+                .inputForm{
+                    font-size: 1rem;
+                    padding: 5px 15px;
+                    border-radius: 13px;
+                }
+                .divTerminos{
+                    font-size: 0.7rem;
+                }
+                .btnRegistracion{
+                    height: 30px;
+                    font-size: 1.1rem;
+                }
+                .linkHelp{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    /*-----estilos para la pagina de detalle.html----*/
+    .sectionSup{
+        height: 87vh;
+        /*display: flex;*/
+        flex-direction: column;
+        .imgDetalle{
+            width: 100%;
+            height: 50%;
+            justify-content: center;
+            margin-top: 10px;
+            img{
+                width: 200px;
+                height: 300px;
+            }
+        }
+        .textoDetalle{
+            width: 100%;
+            height: 50%;
+            h2{
+                font-size: 1.5rem;
+            }
+            h3{
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            h4{
+                font-size: 0.7rem;
+            }
+            .infoDetalle{
+                span{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .sectionInf{
+        height: 60vh;
+        flex-direction: column;
+        .trailerDetalle{
+            width: 90%;
+            height: 50%;
+            margin-top: 15px;
+            h3{
+                font-size: 0.8rem;
+            }
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .globalDetalle{
+            width: 100%;
+            height: 50%;
+            h3{
+                font-size: 1rem;
+            }
+            .tableInfo{
+                font-size: 1.1rem;
+            }
+            .redes{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
 
 
-
-
-/*barra para navegadores Edge, Chrome y Safari*/
-*::-webkit-scrollbar{
-    width: 15px;
-}
-*::-webkit-scrollbar-track{
-    background: var(--secondary-color);
-}
-*::-webkit-scrollbar-thumb{
-    background-color: #013f6b;
-}
-/*barra para navegadores Firefox*/
-*{
-    scrollbar-width: 15px;
-    scrollbar-color: #013f6b;
-}
