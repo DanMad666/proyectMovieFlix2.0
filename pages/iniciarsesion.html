@@ -24,9 +24,11 @@
     <main class="mainIniciosesion">
         <div class="divIniciosesion">
             <h1>Iniciar sesión</h1>
-            <form action="" method="post" class="formIniciosesion">
-                <input class="txtEmail" type="text" name="mail" id="mail" placeholder="E-mail" required>
-                <input class="txtPassword" type="password" name="password" id="password" placeholder="Contraseña" required>
+            <form action="" method="post" class="formIniciosesion" id="formInicioSesion">
+                <input class="txtEmail" type="text" name="mail" id="mail" placeholder="E-mail">
+                <div id="errorMail" class="mensajeError"></div>
+                <input class="txtPassword" type="password" name="password" id="password" placeholder="Contraseña">
+                <div id="errorPassword" class="mensajeError"></div>
                 <input class="btnEnvioForm" type="submit" value="Ingresar">
                 <a class="linkReg" href="./registrarse.html">Registrarse</a>
             </form>
@@ -45,5 +47,6 @@
             <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
         </a>
     </footer>
+    <script src="../js/codigo.js"></script>
 </body>
 </html>
