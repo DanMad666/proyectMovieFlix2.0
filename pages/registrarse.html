@@ -24,12 +24,17 @@
     <main class="mainRegistracion">
         <div class="divRegistracion">
             <h1>Registro</h1>
-            <form action="" method="post" class="formRegistracion">
-                <input class="inputForm" type="text" name="txtNombre" id="txtNombre" placeholder="Nombre" required>
-                <input class="inputForm" type="text" name="txtApellido" id="txtApellido" placeholder="Apellido" required>
-                <input class="inputForm" type="text" name="txtEmail" id="txtEmail" placeholder="Email" required>
-                <input class="inputForm" type="password" name="txtContraseña" id="txtContraseña" placeholder="Contraseña" required>
-                <input class="inputForm" type="date" name="txtFecha" id="txtFecha" placeholder="dd/mm/aaaa" required>
+            <form action="" method="post" class="formRegistracion" id="formRegistracion">
+                <input class="inputForm" type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
+                <div id="errortxtNombre" class="mensajeError"></div>
+                <input class="inputForm" type="text" name="txtApellido" id="txtApellido" placeholder="Apellido">
+                <div id="errortxtApellido" class="mensajeError"></div>
+                <input class="inputForm" type="text" name="txtEmail" id="txtEmail" placeholder="Email">
+                <div id="errortxtEmail" class="mensajeError"></div>
+                <input class="inputForm" type="password" name="txtContrasenia" id="txtContrasenia" placeholder="Contraseña">
+                <div id="errortxtContrasenia" class="mensajeError"></div>
+                <input class="inputForm" type="date" name="txtFecha" id="txtFecha" placeholder="Fecha de Nacimiento">
+                <div id="errortxtFecha" class="mensajeError"></div>
                 <select class="inputForm" name="txtPais" id="txtPais">
                     <option value="Argentina">Argentina</option>
                     <option value="Brasil">Brasil</option>
@@ -42,8 +47,10 @@
                     <option value="Colombia">Colombia</option>
                     <option value="Venezuela">Venezuela</option>
                 </select>
+                <div id="errortxtPais" class="mensajeError"></div>
                 <div class="divTerminos">
-                    <input type="checkbox" name="chkTerminos" id="chkTerminos" value="1" required>
+                    <input type="checkbox" name="chkTerminos" id="chkTerminos" value="1">
+                    <div id="errorchkTerminos" class="mensajeError"></div>
                     <label for="chkTerminos">Acepto términos y condiciones</label>
                 </div>
                 <input class="btnRegistracion" type="submit" value="Registrarse">
@@ -64,5 +71,6 @@
             <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
         </a>
     </footer>
+    <script src="../js/codigo.js"></script>
 </body>
 </html>
