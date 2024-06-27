@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Administrador de Péliculas</title>
+    <link rel="shortcut icon" href="../favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navPrincipal">
+            <a href="../index.html">
+                <img src="../assets/img/iconHome.png" width="40px" alt="Movieflix - Catalogo de Peliculas" loading="lazy" class="logo">
+                <span>Movieflix | Catálogo de Películas</span>
+            </a>
+            <ul class="listNav">
+                <!--<li><a href="../index.html#tendencias" class="linkNav">Tendencias</a></li>-->
+                <li><a href="#" class="linkNav">Registrarse</a></li>
+                <li><a href="./iniciarsesion.html" class="linkNav btnInicioSesion">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sectionAdmSup">
+            <h2>Administrador de Películas</h2>
+            <form action="" id="admPeliculas">
+                <div class="admDivOne">
+                    <div>
+                        <label for="admtit">Título</label>
+                        <input type="text" name="admtit" id="admtit">
+                    </div>
+                    <div>
+                        <label for="admFecEstreno">Fecha Estreno</label>
+                        <input type="date" name="admFecEstreno" id="admFecEstreno" placeholder="dd/mm/aaa">
+                    </div>
+                    <div>
+                        <label for="admGenero">Género</label>
+                        <input type="text" name="admGenero" id="admGenero">
+                    </div>
+                    <div>
+                        <label for="admDuracion">Duración</label>
+                        <input type="text" name="admDuracion" id="admDuracion">
+                    </div>
+                </div>
+                <div class="admDivTwo">
+                    <div>
+                        <label for="admDirector">Director</label>
+                        <input type="text" name="admDirector" id="admDirector">
+                    </div>
+                    <div>
+                        <label for="admReparto">Reparto</label>
+                        <input type="text" name="admReparto" id="admReparto">
+                    </div>
+                </div>
+                <div class="admDivTri">
+                    <label for="admSinopsis">Sinopsis</label>
+                    <textarea name="admSinopsis" id="admSinopsis" rows="3"></textarea>
+                </div>
+                <div class="admDivFour">
+                    <label for="admArchive">Archivo</label>
+                    <input type="file" name="admArchive" id="admArchive" placeholder="Seleccionar archivo">
+                </div>
+            </form>
+        </section>
+        <section class="sectionAdmInf">
+            <h2>Listado de Peiculas</h2>
+            <br>
+            <h3>Elija una pelicula para ver sus datos y modificarlos</h3>
+            <br>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>TITULO</th>
+                    <th>GÉNERO</th>
+                    <th>IMÁGEN</th>
+                    <th>ACCIONES</th>
+                </tr>
+                <tr></tr>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navFooter">
+            <ul class="listaFooter">
+                <li><a href="" class="linkFooter">Términos y condiciones</a></li>
+                <li><a href="" class="linkFooter">Preguntas frecuentes</a></li>
+                <li><a href="" class="linkFooter">Ayuda</a></li>
+                <li><a href="" class="linkFooter linkAdminPelis">Administrador Películas</a></li>
+            </ul>
+        </nav>
+        <a href="#Main" class="flechaArriba">
+            <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
+        </a>
+    </footer>
+</body>
+</html>
