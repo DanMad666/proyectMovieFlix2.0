@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./favicon.ico.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/32ced06dc4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -31,7 +32,7 @@
                 <a href="./pages/registrarse.html" class="btnRegistrarse">Registrarse</a>
             </div>
         </section>
-        <section class="busqueda">
+        <section class="busqueda" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
             <div>
                 <h2>¿Qué estás buscando para ver?</h2>
                 <form action="" class="formBusqueda">
@@ -41,7 +42,7 @@
             </div>
         </section>
         <hr>
-        <section class="peliculasTendencias" id="tendencias">
+        <section class="peliculasTendencias" id="tendencias" data-aos="fade-right" data-aos-duration="1000">
             <h2>Tendencias de hoy</h2>
             <div class="galeriaTendencias">
                 <div class="peliTendencia">
@@ -165,5 +166,7 @@
             <img src="./assets/img/flechaUp.png" width="30px" alt="Ir arriba">
         </a>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
