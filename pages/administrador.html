@@ -25,59 +25,107 @@
     <main>
         <section class="sectionAdmSup">
             <h2>Administrador de Películas</h2>
-            <form action="" id="admPeliculas">
+            <form action="" method="post" id="admPeliculas" class="admFormPeliculas">
                 <div class="admDivOne">
-                    <div>
+                    <div class="admDivAncho1">
                         <label for="admtit">Título</label>
-                        <input type="text" name="admtit" id="admtit">
+                        <input type="text" name="admtit" id="admtit" class="admForm">
+                        <div id="tituloError" class="mensajeError"></div>
                     </div>
-                    <div>
+                    <div class="admDivAncho2">
                         <label for="admFecEstreno">Fecha Estreno</label>
-                        <input type="date" name="admFecEstreno" id="admFecEstreno" placeholder="dd/mm/aaa">
+                        <input type="date" name="admFecEstreno" id="admFecEstreno" placeholder="dd/mm/aaa" class="admForm">
+                        <div id="fechaestrenoError" class="mensajeError"></div>
                     </div>
-                    <div>
+                    <div class="admDivAncho2">
                         <label for="admGenero">Género</label>
-                        <input type="text" name="admGenero" id="admGenero">
+                        <input type="text" name="admGenero" id="admGenero" class="admForm">
+                        <div id="generoError" class="mensajeError"></div>
                     </div>
-                    <div>
+                    <div class="admDivAncho2">
                         <label for="admDuracion">Duración</label>
-                        <input type="text" name="admDuracion" id="admDuracion">
+                        <input type="text" name="admDuracion" id="admDuracion" class="admForm">
+                        <div id="duracionError" class="mensajeError"></div>
                     </div>
                 </div>
                 <div class="admDivTwo">
-                    <div>
+                    <div class="admDivAncho1">
                         <label for="admDirector">Director</label>
-                        <input type="text" name="admDirector" id="admDirector">
+                        <input type="text" name="admDirector" id="admDirector" class="admForm">
+                        <div id="directorError" class="mensajeError"></div>
                     </div>
-                    <div>
+                    <div class="admDivAncho3">
                         <label for="admReparto">Reparto</label>
-                        <input type="text" name="admReparto" id="admReparto">
+                        <input type="text" name="admReparto" id="admReparto" class="admForm">
+                        <div id="repartoError" class="mensajeError"></div>
                     </div>
                 </div>
                 <div class="admDivTri">
-                    <label for="admSinopsis">Sinopsis</label>
-                    <textarea name="admSinopsis" id="admSinopsis" rows="3"></textarea>
+                    <div class="admDivAncho4">
+                        <label for="admSinopsis">Sinopsis</label>
+                        <textarea name="admSinopsis" id="admSinopsis" rows="3" class="admForm"></textarea>
+                        <div id="sinopsisError" class="mensajeError"></div>
+                    </div>
                 </div>
                 <div class="admDivFour">
-                    <label for="admArchive">Archivo</label>
-                    <input type="file" name="admArchive" id="admArchive" placeholder="Seleccionar archivo">
+                    <div class="admDivAncho3">
+                        <label for="admImagen">Imagen</label>
+                        <input type="file" name="admImagen" id="admImagen" placeholder="Seleccionar archivo">
+                        <div id="imagenError" class="mensajeError"></div>
+                    </div>
+                </div>
+                <div class="admDivFive">
+                    <input type="submit" value="Agregar Película" id="AgregarPelicula">
                 </div>
             </form>
         </section>
+        <hr>
         <section class="sectionAdmInf">
-            <h2>Listado de Peiculas</h2>
+            <h2>Listado de Peliculas</h2>
+            <p>Elija una pelicula para ver sus datos y modificarlos</p>
             <br>
-            <h3>Elija una pelicula para ver sus datos y modificarlos</h3>
-            <br>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>TITULO</th>
-                    <th>GÉNERO</th>
-                    <th>IMÁGEN</th>
-                    <th>ACCIONES</th>
-                </tr>
-                <tr></tr>
+            <table class="admTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TÍTULO</th>
+                        <th>GÉNERO</th>
+                        <th>IMAGEN</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Aquaman 2</td>
+                        <td>Acción, Fantasía, Efectos especiales</td>
+                        <td><img src="../assets/img/tendencias/aquaman2.jpg" alt="Aquaman 2"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Beekeeper</td>
+                        <td>Acción, Artes Marciales</td>
+                        <td><img src="../assets/img/tendencias/beekeeper.jpg" alt="Beekeeper"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Wish</td>
+                        <td>Animación, Infantiles</td>
+                        <td><img src="../assets/img/tendencias/wish.jpg" alt="Wish"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </main>

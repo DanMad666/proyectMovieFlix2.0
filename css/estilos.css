@@ -72,10 +72,8 @@ hr{
     font-size: 0.8rem;
     font-style: italic;
     text-align: left;
-    width: 100%;
-    
+    width: 100%;    
 }
-
 
 /*--------*****------Estilos del sitio para Escritorio------****--------------
 ----------------------------------------------------------------------------*/
@@ -624,6 +622,83 @@ hr{
         }
     }
 }
+
+/*----Estilos para la pagina Admnistrador de Películas---*/
+/*--Header mismo estilo que toda la pagina--*/
+.sectionAdmSup{
+    height: 60vh;
+    width: 80%;
+    margin: 0 auto;
+    h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .admFormPeliculas{
+        width: 100%;
+        margin-top: 20px;
+        .admDivOne{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-evenly;
+            gap: 20px;
+            margin-top: 20px;
+            
+            .admDivAncho1{
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                
+            }
+            .admDivAncho2{
+                display: flex;
+                flex-direction: column;
+                width: 20%;
+            }
+        }
+        .admDivTwo{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            column-gap: 20px;
+            margin-top: 30px;
+            .admDivAncho1{
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+            }
+            .admDivAncho3{
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+            }
+        }
+        .admDivTri{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+        }
+        .admDivFour{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .admDivAncho4{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+    .admForm{
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+
+    }
+}
+
+
 
 
 /*--------*****------Estilos del sitio para móvil------****--------------
