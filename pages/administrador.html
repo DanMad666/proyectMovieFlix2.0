@@ -22,10 +22,10 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="mainAdm">
         <section class="sectionAdmSup">
             <h2>Administrador de Películas</h2>
-            <form action="" method="post" id="admPeliculas" class="admFormPeliculas">
+            <form action="" method="post" enctype="multipart/form-data" id="admPeliculas" class="admFormPeliculas">
                 <div class="admDivOne">
                     <div class="admDivAncho1">
                         <label for="admtit">Título</label>
@@ -70,7 +70,7 @@
                 <div class="admDivFour">
                     <div class="admDivAncho5">
                         <label for="admImagen">Imagen</label>
-                        <input type="file" name="admImagen" id="admImagen" class="admForm admFormImg">
+                        <input type="file" name="admImagen" id="admImagen" class="admForm admFormImg" accept="image/jpg">
                         <div id="imagenError" class="mensajeError"></div>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
                         <th>2</th>
                         <td>Beekeeper</td>
                         <td>Acción, Artes Marciales</td>
-                        <td><img src="../assets/img/tendencias/beekeeper.jpg" alt="Beekeeper"></td>
-                        <td>
+                        <td class="tdImg"><img src="../assets/img/tendencias/beekeeper.jpg" alt="Beekeeper"></td>
+                        <td class="tdButtons">
                             <button type="button" class="btnModificar">Modificar</button>
                             <button type="button" class="btnEliminar">Eliminar</button>
                         </td>
@@ -120,6 +120,36 @@
                         <td>Wish</td>
                         <td>Animación, Infantiles</td>
                         <td><img src="../assets/img/tendencias/wish.jpg" alt="Wish"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Wish</td>
+                        <td>Acción, Animales Fantásticos, Fantasía</td>
+                        <td><img src="../assets/img/tendencias/godzillaykong.jpg" alt="Godzilla y Kong"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Wish</td>
+                        <td>Suspenso, Drama, Thriller</td>
+                        <td><img src="../assets/img/tendencias/blackphone.jpeg" alt="Blackphone"></td>
+                        <td>
+                            <button type="button" class="btnModificar">Modificar</button>
+                            <button type="button" class="btnEliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>Wish</td>
+                        <td>Terror, Suspenso, Horror</td>
+                        <td><img src="../assets/img/tendencias/laprimeraprofecia.jpg" alt="La Prinera Profecia"></td>
                         <td>
                             <button type="button" class="btnModificar">Modificar</button>
                             <button type="button" class="btnEliminar">Eliminar</button>
@@ -138,9 +168,10 @@
                 <li><a href="" class="linkFooter linkAdminPelis">Administrador Películas</a></li>
             </ul>
         </nav>
-        <a href="#Main" class="flechaArriba">
+        <a href="#mainAdm" class="flechaArriba">
             <img src="../assets/img/flechaUp.png" width="30px" alt="Ir arriba">
         </a>
     </footer>
+    <script src="../js/codigo.js"></script>
 </body>
 </html>
